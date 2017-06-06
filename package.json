@@ -21,9 +21,8 @@
   },
   "homepage": "https://github.com/igniteonline/ignite-settings#readme",
   "devDependencies": {
-    "ava": "^0.19.1"
-  },
-  "dependencies": {
+    "ava": "^0.19.1",
     "node-fetch": "^1.7.1"
-  }
+  },
+  "dependencies": {}
 }

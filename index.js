@@ -1,5 +1,4 @@
 'use strict';
-const fetch = require('node-fetch');
 
 const defaults = {
   url: 'https://time.ignitestaging.com.au/settings/index',

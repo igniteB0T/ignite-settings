@@ -1,5 +1,10 @@
 import test from 'ava';
 import getToken from './index';
+const fetch = require('node-fetch');
+
+test.before(() => {
+  global.fetch = fetch;
+});
 
 test('it exports a function', t => {
   t.is(typeof getToken, "function");
