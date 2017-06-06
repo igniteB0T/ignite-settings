@@ -1,0 +1,29 @@
+{
+  "name": "ignite-settings",
+  "version": "0.0.1",
+  "description": "Collect common settings from the Ignite Online API",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igniteonline/ignite-settings.git"
+  },
+  "keywords": [
+    "IgniteOnline",
+    "API"
+  ],
+  "author": "Nicolo Sacchi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/igniteonline/ignite-settings/issues"
+  },
+  "homepage": "https://github.com/igniteonline/ignite-settings#readme",
+  "devDependencies": {
+    "ava": "^0.19.1"
+  },
+  "dependencies": {
+    "node-fetch": "^1.7.1"
+  }
+}
