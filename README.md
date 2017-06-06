@@ -10,7 +10,7 @@ This makes it easier for us to maintain/update all our clients platforms without
 The library is written in ES6, hence you need babel support.
 It relies on the fetch API as well, so remember to polyfill if necessary!
 
-```import getToken from 'babel-loader!ignite-settings```
+```import getToken from 'babel-loader!ignite-settings'```
 
 It returns a `Promise` which resolves to the settings if successful or an error message otherwise:
 
