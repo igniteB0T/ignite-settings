@@ -1,5 +1,7 @@
 # Ignite settings
 
+[![Build Status](https://travis-ci.org/igniteonline/ignite-settings.svg?branch=master)](https://travis-ci.org/igniteonline/ignite-settings)
+
 This is a tiny utility library that will hit our API and retrieve our common settings.
 
 This makes it easier for us to maintain/update all our clients platforms without having to charge hours to go through each on of them and manually run the updates.
