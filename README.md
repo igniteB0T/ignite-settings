@@ -1,11 +1,12 @@
-#Ignite settings
+# Ignite settings
+
 This is a tiny utility library that will hit our API and retrieve our common settings.
 
 This makes it easier for us to maintain/update all our clients platforms without having to charge hours to go through each on of them and manually run the updates.
 
 ---
 
-###Usage
+### Usage
 The library is written in ES6, hence you need babel support.
 It relies on the fetch API as well, so remember to polyfill if necessary!
 
@@ -18,11 +19,11 @@ It returns a `Promise` which resolves to the settings if successful or an error 
 .then(token => { // do stuff })
 .catch(error => {// oh no! });
 ```
-###Testing
+### Testing
 We use [AVA](https://github.com/avajs/ava) to run our tests.
 Simply run: 
 
 ```npm run test```
 
-###Contributing
+### Contributing
 Please shoot us an [email](mailto:studio@igniteonline.com.au) for support/suggestions!
