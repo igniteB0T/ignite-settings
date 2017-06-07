@@ -1,24 +1,23 @@
-import test from 'ava';
 import getToken from './index';
 const fetch = require('node-fetch');
 
-test.before(() => {
+beforeAll(() => {
   global.fetch = fetch;
 });
 
-test('it exports a function', t => {
-  t.is(typeof getToken, "function");
+test('it exports a function', () => {
+  expect(typeof getToken).toBe("function");
 });
 
-test('it returns a promise', t => {
+test('it returns a promise', () => {
   return getToken()
     .then(response => {
-      t.truthy(response.length);
+      expect(response.length).toBeTruthy();
     });
 });
-test('it returns an error message if no valid endpoint is specified', t => {
+test('it returns an error message if no valid endpoint is specified', () => {
   return getToken({ url: 'localhost' })
     .catch((err) => {
-      t.is('Something went terribly wrong! How embarrassing!', err);
+      expect('Something went terribly wrong! How embarrassing!').toBe(err);
     });
 });

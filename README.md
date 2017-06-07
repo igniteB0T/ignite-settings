@@ -22,7 +22,7 @@ It returns a `Promise` which resolves to the settings if successful or an error 
 .catch(error => {// oh no! });
 ```
 ### Testing
-We use [AVA](https://github.com/avajs/ava) to run our tests.
+We use [Jest](https://github.com/facebook/jest) to run our tests.
 Simply run: 
 
 ```npm run test```
