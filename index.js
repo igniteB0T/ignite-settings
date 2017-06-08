@@ -1,12 +1,19 @@
 'use strict';
+import querystring from 'querystring';
 
 const defaults = {
-  url: 'https://time.ignitestaging.com.au/settings/index',
+  url: 'https://time.ignitestaging.com.au/api/settings/index',
+};
+
+const addHost = (url) => {
+  return `${url}?${querystring.stringify({
+    client: window.location.hostname,
+  })}`;
 };
 
 const getToken = function (config = defaults) {
   return new Promise((resolve, reject) => {
-    fetch(config.url)
+    fetch(addHost(config.url))
       .then(response => response.json())
       .then(response => resolve(response.instagramToken))
       .catch(() => {
@@ -15,4 +22,5 @@ const getToken = function (config = defaults) {
   });
 };
 
-module.exports = getToken;
+export default getToken;
+export { addHost };
