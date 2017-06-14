@@ -1,6 +1,6 @@
 {
   "name": "ignite-settings",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Collect common settings from the Ignite Online API",
   "main": "lib/index.js",
   "scripts": {
