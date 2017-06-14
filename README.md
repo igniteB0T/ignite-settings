@@ -9,23 +9,38 @@ This makes it easier for us to maintain/update all our clients platforms without
 ---
 
 ### Usage
-The library is written in ES6, hence you need babel support.
+The library is written in ES6 but transpiled with babel for your usage.
 It relies on the fetch API as well, so remember to polyfill if necessary!
 
-```import getToken from 'babel-loader!ignite-settings'```
+```import getToken from 'ignite-settings'```
 
 It returns a `Promise` which resolves to the settings if successful or an error message otherwise:
 
 ```
  getToken()
 .then(token => { // do stuff })
-.catch(error => {// oh no! });
+.catch(error => { // oh no! });
+```
+### Building
+We use [Flow](https://flow.org/en/docs/) for type checking before the build process.
+Ensure you have `flow` running when developing.
+
+Once finished you can build with:
+```javascript
+yarn run build
+```
+or
+```javascript
+npm run build
 ```
 ### Testing
 We use [Jest](https://github.com/facebook/jest) to run our tests.
 Simply run: 
 
 ```npm run test```
+
+The tests will display coverage results too.
+We require 100% test coverage.
 
 ### Contributing
 Please shoot us an [email](mailto:studio@igniteonline.com.au) for support/suggestions!
