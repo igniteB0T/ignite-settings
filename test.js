@@ -1,5 +1,5 @@
-import getToken from './index';
-import { addHost } from './index';
+import getToken from '.';
+import { addHost } from '.';
 const fetch = require('node-fetch');
 
 beforeAll(() => {

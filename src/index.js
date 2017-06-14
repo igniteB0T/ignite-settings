@@ -1,3 +1,4 @@
+// @flow
 'use strict';
 import querystring from 'querystring';
 
@@ -5,13 +6,13 @@ const defaults = {
   url: 'https://time.ignitestaging.com.au/api/settings/index',
 };
 
-const addHost = (url) => {
+const addHost = (url: string) => {
   return `${url}?${querystring.stringify({
     client: window.location.hostname,
   })}`;
 };
 
-const getToken = function (config = defaults) {
+const getToken = function (config: {url: string} = defaults ) {
   return new Promise((resolve, reject) => {
     fetch(addHost(config.url))
       .then(response => response.json())
